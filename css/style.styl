@@ -1,0 +1,84 @@
+green = #34FCD8
+red = #E30451
+gray = #414141
+text-shadow = 3px 3px 15px rgba(gray, 0.5)
+
+*
+    &
+    &::after
+    &::before
+        box-sizing: border-box
+        padding: 0
+        margin: 0
+        border: 0
+        font-family: inherit
+        font-size: inherit
+        object-fit: contain
+        transition: all 0.15s ease-in-out
+
+html
+    font-size: 16px
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif
+    font-weight: 800
+    color: white
+
+body
+    font-size: 1rem
+    background-image: url("../img/bg.png")
+
+header
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 2rem
+
+    h1
+        flex-grow: 1
+        text-align: center
+        font-size: 4rem
+        text-shadow: text-shadow
+        text-transform: uppercase
+
+.score
+    padding: 1rem 1.5rem
+    background: gray
+    text-align: center
+    font-size: 3rem
+
+    svg
+        width: 2rem
+        margin: auto
+
+        path
+            fill: white
+
+    &--win
+        color: green
+
+        svg path
+            fill: green
+
+main
+    position: fixed
+    bottom: -1rem
+    left: 0
+    width: 100%
+    display: flex
+    text-align: center
+    justify-content: space-around
+    font-size: 3rem
+    text-shadow: text-shadow
+
+.weapon
+    img
+        width: calc(100vw / 5 - 2rem)
+        max-width: 15rem
+
+        &:hover
+            transform: scale(1.2)
+            cursor: pointer
+
+    &--computer
+        img
+            transform: scale(1.2)
+            filter: drop-shadow(0 3px 40px red)

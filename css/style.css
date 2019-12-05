@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  object-fit: contain;
+  transition: all 0.15s ease-in-out;
+}
+html {
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 800;
+  color: #fff;
+}
+body {
+  font-size: 1rem;
+  background-image: url("../img/bg.png");
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+header h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 3px 3px 15px rgba(65,65,65,0.5);
+  text-transform: uppercase;
+}
+.score {
+  padding: 1rem 1.5rem;
+  background: #414141;
+  text-align: center;
+  font-size: 3rem;
+}
+.score svg {
+  width: 2rem;
+  margin: auto;
+}
+.score svg path {
+  fill: #fff;
+}
+.score--win {
+  color: #34fcd8;
+}
+.score--win svg path {
+  fill: #34fcd8;
+}
+main {
+  position: fixed;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 3rem;
+  text-shadow: 3px 3px 15px rgba(65,65,65,0.5);
+}
+.weapon img {
+  width: calc(100vw / 5 - 2rem);
+  max-width: 15rem;
+}
+.weapon img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.weapon--computer img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 3px 40px #e30451);
+}
